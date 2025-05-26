@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # dependencies
 node_modules/
 
@@ -8,3 +9,10 @@ dist/
 # misc
 .env
 .DS_Store
+=======
+node_modules/
+build/
+.env
+.DS_Store
+*.log
+>>>>>>> 6882823c95edd66291640e880a51cec7408fa7ed
