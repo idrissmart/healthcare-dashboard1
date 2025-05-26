@@ -1,0 +1,11 @@
+.dashboard-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.top-section {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}

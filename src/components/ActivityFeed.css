@@ -1,0 +1,20 @@
+.activity-feed {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.bar-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  height: 100px;
+  margin-top: 10px;
+}
+
+.bar {
+  width: 20px;
+  background: #4a90e2;
+  border-radius: 4px 4px 0 0;
+}
