@@ -1,16 +1,19 @@
 import React from 'react';
-import { anatomyStatus } from '../data/healthData';
 import './AnatomySection.css';
 
 function AnatomySection() {
   return (
     <div className="anatomy-section">
-      <img src="/assets/human-body.png" alt="Human Body" className="body-img" />
-      <ul className="status-overlay">
-        {anatomyStatus.map((item, index) => (
-          <li key={index} className={`status ${item.color}`}>{item.label}</li>
-        ))}
-      </ul>
+      <img src="/assets/human-body.jpg" alt="Human Body" className="body-img" />
+      {/* Healthy Heart overlay */}
+      <div className="status-overlay heart">
+        <span role="img" aria-label="heart" className="status-icon">❤️</span>
+        Healthy Heart
+      </div>
+      {/* Healthy Log overlay */}
+      <button className="status-overlay log">
+        Healthy Log
+      </button>
     </div>
   );
 }

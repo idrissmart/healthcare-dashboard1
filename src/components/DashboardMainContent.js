@@ -9,13 +9,21 @@ import './DashboardMainContent.css';
 function DashboardMainContent() {
   return (
     <div className="dashboard-main">
-      <div className="top-section">
-        <AnatomySection />
-        <HealthStatusCards />
+      <div className="dashboard-content">
+        {/* Left/Main Section */}
+        <div className="dashboard-left">
+          <div className="dashboard-top-row">
+            <AnatomySection />
+            <HealthStatusCards />
+          </div>
+          <ActivityFeed />
+        </div>
+        {/* Right/Sidebar Section */}
+        <div className="dashboard-right">
+          <CalendarView />
+          <UpcomingSchedule />
+        </div>
       </div>
-      <CalendarView />
-      <UpcomingSchedule />
-      <ActivityFeed />
     </div>
   );
 }

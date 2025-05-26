@@ -1,15 +1,98 @@
 .health-cards {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 18px;
+  min-width: 220px;
 }
 
-.card {
-  padding: 15px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+/* Individual card styling */
+.health-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 22px 20px;
+  box-shadow: 0 2px 12px rgba(74, 144, 226, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 180px;
 }
 
-.card.good { border-left: 5px solid green; }
-.card.bad { border-left: 5px solid red; }
+.health-card-icon {
+  font-size: 30px;
+  margin-bottom: 6px;
+}
+
+.health-card-title {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 2px;
+  color: #232360;
+}
+
+.health-card-date {
+  font-size: 12px;
+  color: #bfc9d9;
+  margin-bottom: 10px;
+}
+
+.health-card-bar-bg {
+  width: 100%;
+  height: 8px;
+  background: #f2f2f2;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.health-card-bar {
+  height: 8px;
+  border-radius: 6px;
+  transition: width 0.3s;
+}
+
+/* --------- Responsive styles --------- */
+
+/* On screens 600px and up, cards go in a row */
+@media (min-width: 600px) {
+  .health-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-width: 0;
+  }
+  .health-card {
+    flex: 0 1 calc(33% - 12px); /* Three cards per row with gap */
+    min-width: unset;
+  }
+}
+
+/* On screens below 600px, stack cards vertically and use full width */
+@media (max-width: 599px) {
+  .health-cards {
+    flex-direction: column;
+    gap: 14px;
+    min-width: 0;
+  }
+  .health-card {
+    width: 100%;
+    min-width: unset;
+    padding: 14px 10px;
+    border-radius: 12px;
+  }
+  .health-card-icon {
+    font-size: 22px;
+  }
+  .health-card-title {
+    font-size: 15px;
+  }
+  .health-card-date {
+    font-size: 10px;
+  }
+  .health-card-bar-bg {
+    height: 6px;
+    border-radius: 4px;
+  }
+  .health-card-bar {
+    height: 6px;
+    border-radius: 4px;
+  }
+}

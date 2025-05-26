@@ -1,13 +1,73 @@
 .appointment-card {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px;
-  background: #f7f9fc;
-  border-radius: 8px;
-  margin-bottom: 8px;
+  background: #f8fbff;
+  border-radius: 14px;
+  padding: 14px 22px;
+  gap: 14px;
+  min-width: 180px;
+  box-shadow: 0 2px 8px rgba(74, 80, 226, 0.04);
+  margin-bottom: 10px;
 }
 
-.appointment-card .icon {
-  font-size: 20px;
+.appointment-icon {
+  font-size: 22px;
+  margin-right: 8px;
+}
+
+.appointment-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.appointment-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #232360;
+  margin-bottom: 2px;
+}
+
+.appointment-time {
+  font-size: 13px;
+  color: #bfc9d9;
+}
+
+/* --------- Responsive styles --------- */
+@media (max-width: 900px) {
+  .appointment-card {
+    min-width: 140px;
+    padding: 10px 14px;
+    gap: 10px;
+  }
+  .appointment-icon {
+    font-size: 18px;
+    margin-right: 6px;
+  }
+  .appointment-title {
+    font-size: 13px;
+  }
+  .appointment-time {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 600px) {
+  .appointment-card {
+    min-width: 0;
+    width: 100%;
+    padding: 8px 8px;
+    gap: 8px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .appointment-icon {
+    font-size: 16px;
+    margin-right: 4px;
+  }
+  .appointment-title {
+    font-size: 12px;
+  }
+  .appointment-time {
+    font-size: 10px;
+  }
 }

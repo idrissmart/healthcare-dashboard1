@@ -1,18 +1,36 @@
 import React from 'react';
-import { upcomingAppointments } from '../data/appointments';
 import SimpleAppointmentCard from './SimpleAppointmentCard';
 import './UpcomingSchedule.css';
+
+const upcomingAppointments = [
+  {
+    day: 'Thursday',
+    items: [
+      { title: 'Health checkup complete', time: '11:00 AM', icon: '💉' },
+      { title: 'Ophthalmologist', time: '14:00 PM', icon: '👁️' },
+    ],
+  },
+  {
+    day: 'Saturday',
+    items: [
+      { title: 'Cardiologist', time: '12:00 AM', icon: '❤️' },
+      { title: 'Neurologist', time: '16:00 PM', icon: '🧑‍⚕️' },
+    ],
+  },
+];
 
 function UpcomingSchedule() {
   return (
     <div className="upcoming-schedule">
-      <h3>The Upcoming Schedule</h3>
+      <h3 className="upcoming-title">The Upcoming Schedule</h3>
       {upcomingAppointments.map((block, idx) => (
-        <div key={idx} className="schedule-block">
-          <h4>On {block.day}</h4>
-          {block.items.map((item, i) => (
-            <SimpleAppointmentCard key={i} {...item} />
-          ))}
+        <div className="schedule-block" key={idx}>
+          <h4 className="schedule-day">On {block.day}</h4>
+          <div className="schedule-cards-row">
+            {block.items.map((item, i) => (
+              <SimpleAppointmentCard key={i} {...item} />
+            ))}
+          </div>
         </div>
       ))}
     </div>

@@ -1,27 +1,229 @@
 .calendar-view {
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  background: #fff;
+  border-radius: 18px;
+  padding: 24px;
+  margin-bottom: 18px;
 }
 
-.calendar-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.calendar-title {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.calendar-header-right {
+  display: flex;
+  align-items: center;
   gap: 10px;
-  margin-top: 10px;
 }
 
-.calendar-day {
-  background: #f0f0f0;
-  padding: 10px;
+.calendar-avatar {
+  background: #e0f7fa;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin-right: 10px;
+}
+
+.calendar-add-btn {
+  background: #4a90e2;
+  color: #fff;
+  border: none;
   border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.calendar-table {
+  margin-bottom: 20px;
+}
+
+.calendar-days-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.calendar-day-col {
+  flex: 1;
   text-align: center;
 }
 
-.appointment-time {
-  display: block;
-  margin-top: 5px;
+.calendar-day-label {
+  color: #bfc9d9;
   font-size: 12px;
-  color: #4a90e2;
+}
+
+.calendar-date {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.calendar-times {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.calendar-time-row {
+  display: flex;
+  gap: 10px;
+}
+
+.calendar-time-cell {
+  flex: 1;
+  text-align: center;
+}
+
+.calendar-appt {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.calendar-time-faint {
+  color: #e0e0e0;
+  font-size: 12px;
+}
+
+.calendar-appointments {
+  display: flex;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.calendar-appt-card {
+  border-radius: 12px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.calendar-appt-card.main {
+  background: #4a50e2;
+  color: #fff;
+}
+
+.calendar-appt-card.secondary {
+  background: #e3e8fa;
+  color: #1a237e;
+}
+
+.calendar-appt-icon {
+  font-size: 28px;
+}
+
+.calendar-appt-title {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.calendar-appt-time,
+.calendar-appt-doctor {
+  font-size: 13px;
+}
+
+/* --------- Responsive styles --------- */
+@media (max-width: 800px) {
+  .calendar-view {
+    padding: 14px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+  }
+
+  .calendar-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .calendar-title {
+    font-size: 15px;
+  }
+
+  .calendar-header-right {
+    gap: 6px;
+  }
+
+  .calendar-avatar,
+  .calendar-add-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .calendar-table {
+    margin-bottom: 12px;
+  }
+
+  .calendar-days-row,
+  .calendar-time-row {
+    gap: 4px;
+  }
+
+  .calendar-day-label,
+  .calendar-date,
+  .calendar-appt,
+  .calendar-time-faint {
+    font-size: 11px;
+  }
+
+  .calendar-appt-card {
+    padding: 8px 10px;
+    gap: 6px;
+    border-radius: 8px;
+  }
+
+  .calendar-appt-icon {
+    font-size: 18px;
+  }
+
+  .calendar-appt-title {
+    font-size: 13px;
+  }
+
+  .calendar-appt-time,
+  .calendar-appt-doctor {
+    font-size: 11px;
+  }
+
+  .calendar-appointments {
+    gap: 8px;
+    margin-top: 10px;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .calendar-view {
+    padding: 8px;
+    border-radius: 8px;
+  }
+  .calendar-header {
+    gap: 4px;
+  }
+  .calendar-appointments {
+    flex-direction: column;
+    gap: 6px;
+  }
 }
