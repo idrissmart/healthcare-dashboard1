@@ -21,44 +21,92 @@
   gap: 28px;
 }
 
+.dashboard-anatomy-block {
+  background: #f8fbff;
+  border-radius: 22px;
+  padding: 32px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 340px;
+  min-height: 420px;
+  box-shadow: 0 4px 24px rgba(74, 144, 226, 0.04);
+}
+
+.dashboard-health-cards-block {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-content: flex-start;
+}
+
+.dashboard-activity-block {
+  margin-top: 22px;
+}
+
 .dashboard-right {
-  flex: 1.1;
+  flex: 1.2;
   display: flex;
   flex-direction: column;
   gap: 24px;
+  min-width: 340px;
 }
 
-/* --------- Responsive styles --------- */
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .dashboard-content {
+    gap: 18px;
+  }
+  .dashboard-anatomy-block {
+    min-width: 260px;
+    padding: 18px 10px;
+  }
+  .dashboard-right {
+    min-width: 220px;
+  }
+}
+
 @media (max-width: 900px) {
   .dashboard-content {
     flex-direction: column;
     gap: 18px;
   }
-
   .dashboard-top-row {
     flex-direction: column;
     gap: 12px;
   }
-
+  .dashboard-anatomy-block {
+    min-width: unset;
+    min-height: 300px;
+    padding: 12px 6px;
+  }
   .dashboard-right {
     width: 100%;
+    min-width: unset;
   }
 }
 
 @media (max-width: 600px) {
   .dashboard-main {
-    padding: 16px 0 0 0;
+    padding: 10px 0 0 0;
   }
   .dashboard-content {
-    gap: 10px;
+    gap: 8px;
   }
   .dashboard-left {
-    gap: 14px;
+    gap: 8px;
   }
   .dashboard-top-row {
+    gap: 6px;
+  }
+  .dashboard-anatomy-block {
+    padding: 6px 2px;
+    border-radius: 10px;
+  }
+  .dashboard-health-cards-block {
     gap: 8px;
   }
   .dashboard-right {
-    gap: 10px;
+    gap: 8px;
   }
 }

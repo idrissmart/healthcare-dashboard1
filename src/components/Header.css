@@ -8,7 +8,7 @@
 }
 
 .header-logo {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: bold;
   letter-spacing: -1px;
   display: flex;
@@ -17,7 +17,7 @@
 }
 
 .header-logo-blue {
-  color: #4a90e2;
+  color: #28c0f1; /* Use the bright blue from the image */
 }
 
 .header-logo-dark {
@@ -27,28 +27,29 @@
 .header-search {
   flex: 1;
   position: relative;
-  max-width: 420px;
+  max-width: 480px;
   margin-right: 40px;
 }
 
 .header-search-icon {
   position: absolute;
-  left: 16px;
+  left: 18px;
   top: 50%;
   transform: translateY(-50%);
   color: #bfc9d9;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .header-search-input {
   width: 100%;
-  padding: 10px 16px 10px 40px;
-  border-radius: 12px;
+  padding: 12px 16px 12px 44px;
+  border-radius: 16px;
   border: none;
   background: #f8fbff;
-  font-size: 15px;
+  font-size: 16px;
   color: #232360;
   outline: none;
+  box-shadow: 0 2px 8px rgba(74, 144, 226, 0.04);
 }
 
 .header-actions {
@@ -58,9 +59,9 @@
 }
 
 .header-bell {
-  font-size: 20px;
-  color: #4a90e2;
-  margin-right: 14px;
+  font-size: 22px;
+  color: #232360;
+  margin-right: 18px;
   cursor: pointer;
 }
 
@@ -71,21 +72,23 @@
 }
 
 .header-avatar {
-  width: 38px;
-  height: 38px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   object-fit: cover;
   background: #e0f7fa;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(74, 144, 226, 0.06);
 }
 
 .header-plus-btn {
-  background: #4a90e2;
+  background: #232360;
   color: #fff;
   border: none;
-  border-radius: 10px;
-  width: 36px;
-  height: 36px;
-  font-size: 18px;
+  border-radius: 12px;
+  width: 38px;
+  height: 38px;
+  font-size: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,10 +98,10 @@
 }
 
 .header-plus-btn:hover {
-  background: #357abd;
+  background: #28c0f1;
 }
 
-/* --------- Responsive styles --------- */
+/* Responsive styles */
 @media (max-width: 900px) {
   .header {
     flex-direction: column;
@@ -128,7 +131,7 @@
   .header-plus-btn {
     width: 30px;
     height: 30px;
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 

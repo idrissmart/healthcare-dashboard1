@@ -13,10 +13,16 @@ function DashboardMainContent() {
         {/* Left/Main Section */}
         <div className="dashboard-left">
           <div className="dashboard-top-row">
-            <AnatomySection />
-            <HealthStatusCards />
+            <div className="dashboard-anatomy-block">
+              <AnatomySection />
+            </div>
+            <div className="dashboard-health-cards-block">
+              <HealthStatusCards />
+            </div>
           </div>
-          <ActivityFeed />
+          <div className="dashboard-activity-block">
+            <ActivityFeed />
+          </div>
         </div>
         {/* Right/Sidebar Section */}
         <div className="dashboard-right">

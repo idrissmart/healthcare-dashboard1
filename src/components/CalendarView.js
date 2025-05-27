@@ -1,6 +1,6 @@
 import React from 'react';
 import './CalendarView.css';
-import { FaUserCircle, FaPlus } from 'react-icons/fa';
+import { FaPlus } from 'react-icons/fa';
 
 const days = [
   { label: 'Mon', date: 25 },
@@ -27,11 +27,9 @@ function CalendarView() {
       <div className="calendar-header">
         <span className="calendar-title">October 2021</span>
         <div className="calendar-header-right">
-          <span className="calendar-avatar"><img
-            src="/assets/avatar.jpg"
-            alt="User"
-            className="header-avatar"
-          /><FaUserCircle /></span>
+          <span className="calendar-avatar">
+            <img src="/assets/avatar.jpg" alt="User" className="calendar-avatar-img" />
+          </span>
           <button className="calendar-add-btn"><FaPlus /></button>
         </div>
       </div>
@@ -48,7 +46,6 @@ function CalendarView() {
           {timeSlots.map((time, tIdx) => (
             <div key={tIdx} className="calendar-time-row">
               {days.map((d, dIdx) => {
-                // Find appointment for this day and time
                 const appt = appointments.find(
                   a => a.day === dIdx && a.time === time
                 );

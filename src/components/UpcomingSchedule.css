@@ -1,15 +1,17 @@
 .upcoming-schedule {
   background: #fff;
   border-radius: 18px;
-  padding: 24px 22px;
+  padding: 28px 24px;
   margin-top: 18px;
+  box-shadow: 0 2px 12px rgba(74, 144, 226, 0.06);
 }
 
 .upcoming-title {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 19px;
+  font-weight: 700;
   color: #232360;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
 }
 
 .schedule-block {
@@ -18,64 +20,57 @@
 
 .schedule-day {
   font-size: 15px;
-  color: #4a90e2;
-  margin-bottom: 8px;
-  font-weight: 500;
+  color: #28c0f1;
+  margin-bottom: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .schedule-cards-row {
   display: flex;
-  gap: 14px;
+  gap: 16px;
 }
 
-/* Responsive styles */
 @media (max-width: 900px) {
   .upcoming-schedule {
-    padding: 18px 16px;
+    padding: 18px 12px;
     margin-top: 14px;
   }
-
   .upcoming-title {
     font-size: 16px;
     margin-bottom: 12px;
   }
-
   .schedule-block {
     margin-bottom: 14px;
   }
-
   .schedule-day {
     font-size: 14px;
     margin-bottom: 6px;
   }
-
   .schedule-cards-row {
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
   }
 }
 
 @media (max-width: 600px) {
   .upcoming-schedule {
-    padding: 14px 12px;
-    margin-top: 12px;
+    padding: 10px 6px;
+    margin-top: 10px;
+    border-radius: 10px;
   }
-
   .upcoming-title {
     font-size: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
-
   .schedule-block {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
-
   .schedule-day {
-    font-size: 13px;
+    font-size: 12px;
     margin-bottom: 4px;
   }
-
   .schedule-cards-row {
-    gap: 10px;
+    gap: 7px;
   }
 }

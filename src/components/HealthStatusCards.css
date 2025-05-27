@@ -1,15 +1,14 @@
 .health-cards {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 22px;
   min-width: 220px;
 }
 
-/* Individual card styling */
 .health-card {
   background: #fff;
   border-radius: 18px;
-  padding: 22px 20px;
+  padding: 28px 24px;
   box-shadow: 0 2px 12px rgba(74, 144, 226, 0.05);
   display: flex;
   flex-direction: column;
@@ -18,54 +17,45 @@
 }
 
 .health-card-icon {
-  font-size: 30px;
-  margin-bottom: 6px;
+  font-size: 34px;
+  margin-bottom: 10px;
 }
 
 .health-card-title {
-  font-size: 17px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 700;
   margin-bottom: 2px;
   color: #232360;
 }
 
 .health-card-date {
-  font-size: 12px;
+  font-size: 13px;
   color: #bfc9d9;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .health-card-bar-bg {
   width: 100%;
-  height: 8px;
+  height: 10px;
   background: #f2f2f2;
   border-radius: 6px;
   overflow: hidden;
 }
 
 .health-card-bar {
-  height: 8px;
+  height: 10px;
   border-radius: 6px;
   transition: width 0.3s;
 }
 
-/* --------- Responsive styles --------- */
-
-/* On screens 600px and up, cards go in a row */
+/* Responsive styles */
 @media (min-width: 600px) {
   .health-cards {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    min-width: 0;
-  }
-  .health-card {
-    flex: 0 1 calc(33% - 12px); /* Three cards per row with gap */
-    min-width: unset;
+    flex-direction: column;
+    gap: 22px;
   }
 }
 
-/* On screens below 600px, stack cards vertically and use full width */
 @media (max-width: 599px) {
   .health-cards {
     flex-direction: column;

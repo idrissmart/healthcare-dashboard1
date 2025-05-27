@@ -6,8 +6,8 @@ function SimpleAppointmentCard({ title, time, icon }) {
     <div className="appointment-card">
       <span className="appointment-icon">{icon}</span>
       <div className="appointment-info">
-        <div className="appointment-title">{title}</div>
-        <div className="appointment-time">{time}</div>
+        <span className="appointment-title">{title}</span>
+        <span className="appointment-time">{time}</span>
       </div>
     </div>
   );

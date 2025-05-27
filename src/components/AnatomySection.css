@@ -1,32 +1,33 @@
 .anatomy-section {
   position: relative;
   background: #f8fbff;
-  border-radius: 18px;
-  padding: 24px;
-  min-width: 320px;
-  min-height: 400px;
+  border-radius: 22px;
+  padding: 32px 24px;
+  min-width: 340px;
+  min-height: 420px;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 24px rgba(74, 144, 226, 0.04);
 }
 
 .body-img {
-  width: 180px;
+  width: 210px;
   display: block;
   margin: 0 auto;
 }
 
 .status-overlay.heart {
   position: absolute;
-  top: 60px;
+  top: 48px;
   left: 60%;
   transform: translateX(-50%);
   background: #4a50e2;
   color: #fff;
-  border-radius: 14px;
-  padding: 4px 18px;
-  font-weight: 500;
-  font-size: 14px;
+  border-radius: 16px;
+  padding: 8px 22px;
+  font-weight: 600;
+  font-size: 16px;
   display: flex;
   align-items: center;
   z-index: 2;
@@ -34,57 +35,53 @@
 }
 
 .status-overlay.heart .status-icon {
-  margin-right: 8px;
-  font-size: 16px;
+  margin-right: 10px;
+  font-size: 20px;
 }
 
 .status-overlay.log {
   position: absolute;
-  top: 70%;
-  left: 15%;
+  top: 68%;
+  left: 20%;
   transform: translateY(-50%);
   background: #00e6e6;
   color: #fff;
   border: none;
-  border-radius: 14px;
-  padding: 6px 22px;
-  font-weight: 500;
-  font-size: 14px;
+  border-radius: 16px;
+  padding: 8px 28px;
+  font-weight: 600;
+  font-size: 16px;
   cursor: pointer;
   z-index: 2;
   box-shadow: 0 2px 8px rgba(0, 230, 230, 0.08);
 }
 
-/* --------- Responsive styles --------- */
-@media (max-width: 600px) {
+/* Responsive styles */
+@media (max-width: 900px) {
   .anatomy-section {
-    padding: 16px;
-    min-width: unset;
+    padding: 18px 10px;
+    min-width: 200px;
     min-height: 240px;
   }
-
   .body-img {
     width: 120px;
   }
-
   .status-overlay.heart {
     top: 32px;
     left: 50%;
-    padding: 3px 10px;
-    font-size: 12px;
+    padding: 4px 12px;
+    font-size: 13px;
     border-radius: 12px;
   }
-
   .status-overlay.heart .status-icon {
     font-size: 13px;
     margin-right: 5px;
   }
-
   .status-overlay.log {
     top: 62%;
     left: 8%;
     padding: 4px 12px;
-    font-size: 12px;
+    font-size: 13px;
     border-radius: 12px;
   }
 }
