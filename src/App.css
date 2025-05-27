@@ -1,20 +1,23 @@
-/* App.css: Layout and main container styles */
 .app {
   display: flex;
   min-height: 100vh;
   background: #f4f8fc;
-  padding: 32px;
+  padding: min(4vw, 32px);
   box-sizing: border-box;
 }
 
 .sidebar {
-  margin-right: 32px;
+  margin-right: min(2vw, 32px);
+  flex-shrink: 0;
+  min-width: 200px;
+  width: 18vw;
+  max-width: 260px;
 }
 
 .main-area {
-  flex: 1;
+  flex: 1 1 0;
   background: #fff;
-  border-radius: 32px;
+  border-radius: 2vw;
   box-shadow: 0 8px 40px rgba(74, 144, 226, 0.08);
   padding: 0;
   display: flex;
@@ -27,13 +30,16 @@
 /* Responsive styles */
 @media (max-width: 1200px) {
   .app {
-    padding: 12px;
+    padding: min(2vw, 12px);
   }
   .sidebar {
-    margin-right: 12px;
+    margin-right: min(1vw, 12px);
+    min-width: 120px;
+    width: 22vw;
+    max-width: 180px;
   }
   .main-area {
-    border-radius: 18px;
+    border-radius: 1vw;
   }
 }
 
@@ -45,6 +51,9 @@
   .sidebar {
     margin-right: 0;
     margin-bottom: 12px;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
   }
   .main-area {
     border-radius: 0;

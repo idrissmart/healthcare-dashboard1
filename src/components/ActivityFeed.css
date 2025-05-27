@@ -26,21 +26,24 @@
   font-weight: 500;
 }
 
-.activity-chart {
-  display: flex;
-  align-items: flex-end;
-  gap: 24px;
-  height: 80px;
+.activity-chart-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  align-items: end;
+  gap: 0;
+  height: 90px;
+  width: 100%;
 }
 
 .activity-bar-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .activity-bar {
-  width: 12px;
+  width: 14px;
   border-radius: 6px;
   transition: background 0.2s;
 }
@@ -50,35 +53,4 @@
   color: #bfc9d9;
   margin-top: 8px;
   font-weight: 600;
-}
-
-@media (max-width: 600px) {
-  .activity-feed {
-    padding: 14px;
-    margin-top: 12px;
-    border-radius: 10px;
-  }
-  .activity-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-    margin-bottom: 8px;
-  }
-  .activity-title {
-    font-size: 15px;
-  }
-  .activity-subtitle {
-    font-size: 12px;
-  }
-  .activity-chart {
-    height: 50px;
-    gap: 10px;
-  }
-  .activity-bar {
-    width: 7px;
-  }
-  .activity-day {
-    font-size: 10px;
-    margin-top: 4px;
-  }
 }

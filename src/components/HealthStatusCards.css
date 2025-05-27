@@ -6,7 +6,7 @@
 }
 
 .health-card {
-  background: #fff;
+  background: #f8fbff;
   border-radius: 18px;
   padding: 28px 24px;
   box-shadow: 0 2px 12px rgba(74, 144, 226, 0.05);
@@ -48,41 +48,16 @@
   transition: width 0.3s;
 }
 
-/* Responsive styles */
 @media (min-width: 600px) {
-  .health-cards {
-    flex-direction: column;
-    gap: 22px;
-  }
+  .health-cards { flex-direction: column; gap: 22px; }
 }
 
 @media (max-width: 599px) {
-  .health-cards {
-    flex-direction: column;
-    gap: 14px;
-    min-width: 0;
-  }
-  .health-card {
-    width: 100%;
-    min-width: unset;
-    padding: 14px 10px;
-    border-radius: 12px;
-  }
-  .health-card-icon {
-    font-size: 22px;
-  }
-  .health-card-title {
-    font-size: 15px;
-  }
-  .health-card-date {
-    font-size: 10px;
-  }
-  .health-card-bar-bg {
-    height: 6px;
-    border-radius: 4px;
-  }
-  .health-card-bar {
-    height: 6px;
-    border-radius: 4px;
-  }
+  .health-cards { flex-direction: column; gap: 14px; min-width: 0; }
+  .health-card { width: 100%; min-width: unset; padding: 14px 10px; border-radius: 12px; }
+  .health-card-icon { font-size: 22px; }
+  .health-card-title { font-size: 15px; }
+  .health-card-date { font-size: 10px; }
+  .health-card-bar-bg { height: 6px; border-radius: 4px; }
+  .health-card-bar { height: 6px; border-radius: 4px; }
 }

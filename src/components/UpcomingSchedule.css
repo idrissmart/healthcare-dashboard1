@@ -53,6 +53,16 @@
   }
 }
 
+.schedule-cards-row .appointment-card {
+  background: #f8fbff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(74, 144, 226, 0.06);
+  font-size: 15px;
+  font-weight: 600;
+  color: #232360;
+}
+
+
 @media (max-width: 600px) {
   .upcoming-schedule {
     padding: 10px 6px;
@@ -74,3 +84,4 @@
     gap: 7px;
   }
 }
+

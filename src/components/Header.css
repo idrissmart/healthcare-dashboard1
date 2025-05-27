@@ -1,23 +1,23 @@
 .header {
   display: flex;
   align-items: center;
-  padding: 32px 40px 0 40px;
+  padding: 44px 54px 0 54px;
   background: transparent;
   width: 100%;
-  gap: 24px;
+  gap: 34px;
 }
 
 .header-logo {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: bold;
-  letter-spacing: -1px;
+  letter-spacing: -1.5px;
   display: flex;
   align-items: center;
-  margin-right: 32px;
+  margin-right: 44px;
 }
 
 .header-logo-blue {
-  color: #28c0f1; /* Use the bright blue from the image */
+  color: #28c0f1;
 }
 
 .header-logo-dark {
@@ -27,68 +27,68 @@
 .header-search {
   flex: 1;
   position: relative;
-  max-width: 480px;
-  margin-right: 40px;
+  max-width: 540px;
+  margin-right: 54px;
 }
 
 .header-search-icon {
   position: absolute;
-  left: 18px;
+  left: 22px;
   top: 50%;
   transform: translateY(-50%);
   color: #bfc9d9;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .header-search-input {
   width: 100%;
-  padding: 12px 16px 12px 44px;
-  border-radius: 16px;
+  padding: 16px 22px 16px 60px;
+  border-radius: 18px;
   border: none;
   background: #f8fbff;
-  font-size: 16px;
+  font-size: 18px;
   color: #232360;
   outline: none;
-  box-shadow: 0 2px 8px rgba(74, 144, 226, 0.04);
+  box-shadow: 0 2px 8px rgba(74, 144, 226, 0.06);
 }
 
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 34px;
 }
 
 .header-bell {
-  font-size: 22px;
+  font-size: 28px;
   color: #232360;
-  margin-right: 18px;
+  margin-right: 24px;
   cursor: pointer;
 }
 
 .header-avatar-group {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 18px;
 }
 
 .header-avatar {
-  width: 42px;
-  height: 42px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   object-fit: cover;
   background: #e0f7fa;
   border: 2px solid #fff;
-  box-shadow: 0 2px 8px rgba(74, 144, 226, 0.06);
+  box-shadow: 0 2px 8px rgba(74, 144, 226, 0.08);
 }
 
 .header-plus-btn {
   background: #232360;
   color: #fff;
   border: none;
-  border-radius: 12px;
-  width: 38px;
-  height: 38px;
-  font-size: 20px;
+  border-radius: 14px;
+  width: 44px;
+  height: 44px;
+  font-size: 26px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,70 +99,4 @@
 
 .header-plus-btn:hover {
   background: #28c0f1;
-}
-
-/* Responsive styles */
-@media (max-width: 900px) {
-  .header {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 20px 16px 0 16px;
-    gap: 14px;
-  }
-  .header-logo {
-    font-size: 22px;
-    margin-right: 0;
-    margin-bottom: 6px;
-    justify-content: flex-start;
-  }
-  .header-search {
-    max-width: 100%;
-    margin-right: 0;
-    margin-bottom: 8px;
-  }
-  .header-actions {
-    gap: 12px;
-    justify-content: flex-end;
-  }
-  .header-avatar {
-    width: 32px;
-    height: 32px;
-  }
-  .header-plus-btn {
-    width: 30px;
-    height: 30px;
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 600px) {
-  .header {
-    padding: 12px 6px 0 6px;
-    gap: 8px;
-  }
-  .header-logo {
-    font-size: 18px;
-  }
-  .header-search-input {
-    font-size: 13px;
-    padding: 8px 12px 8px 32px;
-    border-radius: 9px;
-  }
-  .header-search-icon {
-    left: 10px;
-    font-size: 13px;
-  }
-  .header-bell {
-    font-size: 16px;
-    margin-right: 8px;
-  }
-  .header-avatar {
-    width: 24px;
-    height: 24px;
-  }
-  .header-plus-btn {
-    width: 22px;
-    height: 22px;
-    font-size: 12px;
-  }
 }

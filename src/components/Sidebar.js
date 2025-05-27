@@ -22,7 +22,6 @@ function Sidebar() {
         <span className="logo-blue">Health</span>
         <span className="logo-dark">care.</span>
       </div>
-
       <div className="sidebar-section">
         <div className="sidebar-section-title">GENERAL</div>
         <ul>
@@ -37,7 +36,6 @@ function Sidebar() {
           ))}
         </ul>
       </div>
-
       <div className="sidebar-section">
         <div className="sidebar-section-title">TOOLS</div>
         <ul>
@@ -49,7 +47,6 @@ function Sidebar() {
           ))}
         </ul>
       </div>
-
       <div className="sidebar-setting">
         <span className="sidebar-icon"><FaCog /></span>
         <span>Setting</span>

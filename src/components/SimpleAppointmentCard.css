@@ -40,44 +40,16 @@
   letter-spacing: 0.1px;
 }
 
-/* --------- Responsive styles --------- */
 @media (max-width: 900px) {
-  .appointment-card {
-    min-width: 140px;
-    padding: 10px 14px;
-    gap: 10px;
-    border-radius: 12px;
-    font-size: 14px;
-  }
-  .appointment-icon {
-    font-size: 18px;
-    margin-right: 6px;
-  }
-  .appointment-title {
-    font-size: 13px;
-  }
-  .appointment-time {
-    font-size: 11px;
-  }
+  .appointment-card { min-width: 140px; padding: 10px 14px; gap: 10px; border-radius: 12px; font-size: 14px; }
+  .appointment-icon { font-size: 18px; margin-right: 6px; }
+  .appointment-title { font-size: 13px; }
+  .appointment-time { font-size: 11px; }
 }
 
 @media (max-width: 600px) {
-  .appointment-card {
-    min-width: 0;
-    width: 100%;
-    padding: 8px 8px;
-    gap: 8px;
-    border-radius: 10px;
-    font-size: 13px;
-  }
-  .appointment-icon {
-    font-size: 16px;
-    margin-right: 4px;
-  }
-  .appointment-title {
-    font-size: 12px;
-  }
-  .appointment-time {
-    font-size: 10px;
-  }
+  .appointment-card { min-width: 0; width: 100%; padding: 8px 8px; gap: 8px; border-radius: 10px; font-size: 13px; }
+  .appointment-icon { font-size: 16px; margin-right: 4px; }
+  .appointment-title { font-size: 12px; }
+  .appointment-time { font-size: 10px; }
 }

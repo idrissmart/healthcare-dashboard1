@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './CalendarView.css';
-import { FaPlus } from 'react-icons/fa';
+import { FaPlus, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const days = [
   { label: 'Mon', date: 25 },
@@ -12,20 +12,24 @@ const days = [
   { label: 'Sun', date: 31 },
 ];
 
-const timeSlots = ['08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00'];
+const timeSlots = ['10:00', '12:00', '14:00'];
 
 const appointments = [
-  { day: 1, time: '09:00', label: 'Dentist', color: '#4a50e2', doctor: 'Dr. Cameron Williamson', icon: '🦷', duration: '09:00-11:00' },
-  { day: 1, time: '11:00', label: 'Physiotherapy Appointment', color: '#e3e8fa', doctor: 'Dr. Kevin Djones', icon: '🦴', duration: '11:00-12:00' },
-  { day: 5, time: '12:00', label: '', color: '#4a90e2', doctor: '', icon: '', duration: '12:00' },
-  { day: 6, time: '09:00', label: '', color: '#4a90e2', doctor: '', icon: '', duration: '09:00' },
+  { day: 1, time: '12:00', label: 'Dentist', color: '#4a50e2', doctor: 'Dr. Cameron Williamson', icon: '🦷', duration: '12:00-13:00' },
+  { day: 2, time: '14:00', label: 'Physiotherapy', color: '#e3e8fa', doctor: 'Dr. Kevin Djones', icon: '🦴', duration: '14:00-15:00' },
 ];
 
 function CalendarView() {
+  const [month, setMonth] = useState('October 2021');
+  const handlePrev = () => setMonth('September 2021');
+  const handleNext = () => setMonth('November 2021');
+
   return (
-    <div className="calendar-view">
+    <div className="calendar-view compact">
       <div className="calendar-header">
-        <span className="calendar-title">October 2021</span>
+        <button className="calendar-arrow" onClick={handlePrev}><FaChevronLeft /></button>
+        <span className="calendar-title">{month}</span>
+        <button className="calendar-arrow" onClick={handleNext}><FaChevronRight /></button>
         <div className="calendar-header-right">
           <span className="calendar-avatar">
             <img src="/assets/avatar.jpg" alt="User" className="calendar-avatar-img" />
@@ -59,7 +63,7 @@ function CalendarView() {
                           color: appt.color === '#4a50e2' ? '#fff' : '#1a237e',
                         }}
                       >
-                        {time}
+                        {appt.label}
                       </span>
                     ) : (
                       <span className="calendar-time-faint">{time}</span>
@@ -69,24 +73,6 @@ function CalendarView() {
               })}
             </div>
           ))}
-        </div>
-      </div>
-      <div className="calendar-appointments">
-        <div className="calendar-appt-card main">
-          <span className="calendar-appt-icon">🦷</span>
-          <div>
-            <div className="calendar-appt-title">Dentist</div>
-            <div className="calendar-appt-time">09:00-11:00</div>
-            <div className="calendar-appt-doctor">Dr. Cameron Williamson</div>
-          </div>
-        </div>
-        <div className="calendar-appt-card secondary">
-          <span className="calendar-appt-icon">🦴</span>
-          <div>
-            <div className="calendar-appt-title">Physiotherapy Appointment</div>
-            <div className="calendar-appt-time">11:00-12:00</div>
-            <div className="calendar-appt-doctor">Dr. Kevin Djones</div>
-          </div>
         </div>
       </div>
     </div>
